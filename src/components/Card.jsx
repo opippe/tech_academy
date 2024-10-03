@@ -5,12 +5,12 @@ function Card(props) {
     return (
         <>
             <a id="card" href="#">
-                <img class="card-image" src="https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/74/BLG_Bin_2024_Split_1.png/revision/latest/scale-to-width-down/220?cb=20240121154757" />
+                <img class="card-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png" />
                 <article class="card-article">
                     <div class="article-details">
-                        <h3 class="card-title"> Engenharia de Software</h3>
-                        <p class="card-category"> Bacharelado | Presencial</p>
-                        <p class="post-description"> O trabalho desenvolvido pelo Engenheiro de Software tem como foco a melhoria da produtividade de diferentes áreas do mercado de trabalho, do ensino, assim como do lazer. </p>
+                        <h3 class="card-title">{props.title}</h3>
+                        <p class="card-category">{props.category}</p>
+                        <p class="post-description">{props.description}</p>
                         <button class="inscricao-button">FAZER INSCRIÇÃO</button>
                     </div>
                 </article>

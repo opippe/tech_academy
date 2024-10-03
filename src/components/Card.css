@@ -1,7 +1,7 @@
 #card {
     display: flex;
     width: 100%;
-    max-width: 1000px; /* Limit the size of the card */
+    max-width: 1000px;
     flex-direction: row;
     text-decoration: none;
     padding: 1rem;
@@ -11,7 +11,7 @@
 .card-article {
     text-align: left;
     color: black;
-    width: 60%; /* Adjust this to balance the card layout */
+    width: 60%;
 }
 
 .card-category {
@@ -20,7 +20,7 @@
 
 .card-image {
     margin-right: 1rem;
-    width: 40%; /* Adjust the image width to make it smaller */
+    width: 30%;
 }
 
 .inscricao-button {
