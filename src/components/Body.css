@@ -1,0 +1,33 @@
+#body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#section1 {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+#section2 {
+    background-color: #007AFF;
+    height: 400px;
+    text-align: left;
+    color: white;
+    padding: 0 2rem;
+
+}
+
+.swiper {
+    height: 100% !important;
+}
+
+.swiper-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
