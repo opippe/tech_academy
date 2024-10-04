@@ -5,7 +5,7 @@ function Card(props) {
     return (
         <>
             <a id="card" href="#">
-                <img class="card-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png" />
+                <img class="card-image" src={props.image} />
                 <article class="card-article">
                     <div class="article-details">
                         <h3 class="card-title">{props.title}</h3>

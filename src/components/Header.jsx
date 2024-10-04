@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import "./Header.css";
 
 function Header() {
-    // Hook para controlar o estado do menu
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(true);
 
-    // Função para alternar o estado do menu
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };

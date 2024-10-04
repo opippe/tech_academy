@@ -6,6 +6,7 @@
     text-decoration: none;
     padding: 1rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 2rem 0;
 }
 
 .card-article {
@@ -21,6 +22,7 @@
 .card-image {
     margin-right: 1rem;
     width: 30%;
+    object-fit: cover;
 }
 
 .inscricao-button {
@@ -38,7 +40,24 @@
         flex-direction: column;
         align-items: center;
         box-shadow: none;
+        margin: 1rem 0;
+        padding: 0 1rem;
     }
 
+    .card-image {
+        margin-right: 0;
+        width: 85%;
+        height: 100px;
+        object-fit: cover;
+    }
 
+    .card-article {
+        text-align: left;
+        color: black;
+        width: 85%;
+    }
+
+    :root {
+        --swiper-navigation-size: 22px;
+    }
 }
