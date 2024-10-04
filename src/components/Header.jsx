@@ -1,15 +1,28 @@
-import React from "react";
-import "./Header.css"
+import React, { useState } from "react";
+import "./Header.css";
 
 function Header() {
+    // Hook para controlar o estado do menu
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    // Função para alternar o estado do menu
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <header>
             <div className="logo">
                 <h1 id="title">tech academy</h1>
             </div>
-            <div className="links">
+
+            <div className="hamburger" onClick={toggleMenu}>
+                <i className="fa-solid fa-bars"></i>
+            </div>
+
+            <div className={`links ${isMenuOpen ? "open" : ""}`}>
                 <ul className="navigation">
-                    <li><i class="fa-solid fa-house"></i><a href="">A Tech Academy</a></li>
+                    <li><i className="fa-solid fa-house"></i><a href="">A Tech Academy</a></li>
                     <li><a href="">Bacharelado</a></li>
                     <li><a href="">Tecnólogo</a></li>
                     <li><a href="">Pós-graduação</a></li>
@@ -20,7 +33,7 @@ function Header() {
                 </ul>
             </div>
         </header>
-    )
+    );
 }
 
 export default Header;

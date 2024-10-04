@@ -11,6 +11,17 @@ header {
     display: flex;
     line-height: 1rem;
     align-items: center;
+    transition: max-height 0.3s ease;
+}
+
+/* Oculta os links em mobile por padrão */
+.links.open {
+    max-height: 500px; /* Exibe quando aberto */
+}
+
+.links {
+    max-height: 0;
+    overflow: hidden;
 }
 
 i {
@@ -52,4 +63,66 @@ i {
     color: #007AFF;
     line-height: 1rem;
     pointer-events: none;
+}
+
+/* Estilos para o ícone hambúrguer */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Media Query para Mobile */
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 1.5rem;
+        width: 100%;
+    }
+
+    .navigation {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .login {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-top: 10px;
+        align-self: center;
+    }
+
+    .navigation a, .login a {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    .navigation li, .login li {
+        margin-bottom: 10px;
+    }
+
+    /* Exibe o ícone hambúrguer apenas em telas pequenas */
+    .hamburger {
+        display: block;
+        margin-left: auto;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    /* Esconde as opções de links em telas pequenas por padrão */
+    .links {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+    }
 }

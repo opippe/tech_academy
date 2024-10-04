@@ -6,11 +6,10 @@
 }
 
 #section1 {
-    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 5rem;
+    padding: 2rem 5rem;
 }
 
 #section2 {
@@ -31,7 +30,7 @@
 }
 
 .diferenciais-container {
-    padding: 0 0 2rem 0;
+    padding: 0 1rem 2rem 1rem;
     text-align: center;
 }
 
@@ -71,4 +70,22 @@
 
 .diferencial-item:hover {
     transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    .diferencial-item {
+        margin-bottom: 20px;
+    }
+
+    #section1 {
+        padding: 2rem 0rem;
+    }
 }
