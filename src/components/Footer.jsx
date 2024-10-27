@@ -4,9 +4,9 @@ import "./Footer.css"
 function Footer() {
     return (
         <footer>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-linkedin"></i>
+            <i className="fa-brands fa-instagram"></i>
+            <i className="fa-brands fa-facebook-f"></i>
+            <i className="fa-brands fa-linkedin"></i>
         </footer>
     )
 }

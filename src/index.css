@@ -1,14 +1,11 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 
 * {
   background: none repeat scroll 0 0 transparent;
   border: medium none;
-}
-
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 400;
 }

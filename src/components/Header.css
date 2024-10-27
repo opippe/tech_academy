@@ -30,10 +30,7 @@ i {
 
 .navigation {
     display: flex;
-    justify-content: space-between;
     list-style: none;
-    width: 100%;
-    max-width: 600px;
     padding: 0;
 }
 
@@ -41,22 +38,17 @@ i {
     color: black;
     font-weight: 500;
     text-decoration: inherit;
+    margin-right: 1.5rem;
 }
 
 .login {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    max-width: 250px;
+    max-width: 200px;
     list-style: none;
     margin-left: auto;
     font-weight: bold;
-}
-
-.login a {
-    color: #004AB8;
-    font-weight: 500;
-    text-decoration: inherit;
 }
 
 #title {
@@ -65,14 +57,30 @@ i {
     pointer-events: none;
 }
 
-/* Estilos para o ícone hambúrguer */
+#botao {
+    padding: .25rem .5rem;
+    font-weight: 600;
+    border-radius: .25rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.botao-entrar {
+    background-color: #007AFF;
+    color: white;
+}
+
+.botao-cadastro {
+    border: 2px solid #007AFF;
+    color: #007AFF;
+}
+
 .hamburger {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
-/* Media Query para Mobile */
 @media (max-width: 768px) {
     header {
         justify-content: space-between;
@@ -100,16 +108,15 @@ i {
         align-self: center;
     }
 
-    .navigation a, .login a {
+    .navigation a, .login button {
         font-size: 1rem;
         padding: 10px 0;
     }
 
-    .navigation li, .login li {
+    .navigation li, .login button {
         margin-bottom: 10px;
     }
 
-    /* Exibe o ícone hambúrguer apenas em telas pequenas */
     .hamburger {
         display: block;
         margin-left: auto;
@@ -118,7 +125,6 @@ i {
         top: 1rem;
     }
 
-    /* Esconde as opções de links em telas pequenas por padrão */
     .links {
         display: flex;
         flex-direction: column;
