@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
 
 function Header(props) {
@@ -8,30 +9,38 @@ function Header(props) {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const navigate = useNavigate();
+
+    const handleSair = () => {
+        props.setUserRole("")
+        props.setIsAuth(false)
+        navigate("/tech_academy")
+    }
+
     const renderMenuItems = () => {
         if (props.userRole === "Professor") {
             return (
                 <>
-                    <li><a href="">Aulas</a></li>
-                    <li><a href="">Conteúdos</a></li>
-                    <li><a href="">Avaliações</a></li>
+                    <li><Link to="/aulas">Aulas</Link></li>
+                    <li><Link to="/conteudos">Conteúdos</Link></li>
+                    <li><Link to="/avaliacoes">Avaliações</Link></li>
                 </>
             );
         } else if (props.userRole === "Aluno") {
             return (
                 <>
-                    <li><a href="">Minhas Aulas</a></li>
-                    <li><a href="">Materiais</a></li>
-                    <li><a href="">Resultados</a></li>
+                    <li><Link to="/minhas-aulas">Minhas Aulas</Link></li>
+                    <li><Link to="/materiais">Materiais</Link></li>
+                    <li><Link to="/resultados">Resultados</Link></li>
                 </>
             );
         } else {
             return (
                 <>
-                    <li><a href="">A Tech Academy</a></li>
-                    <li><a href="">Bacharelado</a></li>
-                    <li><a href="">Tecnólogo</a></li>
-                    <li><a href="">Pós-graduação</a></li>
+                    <li><Link to="/tech_academy">A Tech Academy</Link></li>
+                    <li><Link to="/bacharelado">Bacharelado</Link></li>
+                    <li><Link to="/tecnologo">Tecnólogo</Link></li>
+                    <li><Link to="/pos-graduacao">Pós-graduação</Link></li>
                 </>
             );
         }
@@ -40,7 +49,7 @@ function Header(props) {
     return (
         <header>
             <div className="logo">
-                <h1 id="title">tech academy</h1>
+                <Link id="title" to="/tech_academy"><h1 id="title">tech academy</h1></Link>
             </div>
 
             <div className="hamburger" onClick={toggleMenu}>
@@ -52,12 +61,16 @@ function Header(props) {
                     {renderMenuItems()}
                 </ul>
 
-                {!props.isAuth &&
+                {props.isAuth ? (
+                    <div className="login">
+                        <button id="botao" className="botao-sair" onClick={() => handleSair()}>Sair</button>
+                    </div>
+                ) : (
                     <div className="login">
                         <button id="botao" className="botao-cadastro" onClick={() => props.setIsCadastroOpen(true)}>Cadastre-se</button>
                         <button id="botao" className="botao-entrar" onClick={() => props.setIsLoginOpen(true)}>Entrar</button>
                     </div>
-                }
+                )}
             </div>
         </header>
     );

@@ -18,13 +18,12 @@ function Login(props) {
         const savedUserData = JSON.parse(localStorage.getItem("userData"));
 
         if (savedUserData && savedUserData.username === username && savedUserData.password === password) {
-            alert("Login successful!");
             setError("");
             props.setIsAuth(true);
-            props.setUserRole(savedUserData.role);  // Set the user role
+            props.setUserRole(savedUserData.role);
             props.setIsLoginOpen(false);
         } else {
-            setError("Invalid username or password.");
+            setError("Usuário ou senha inválidos.");
         }
     };
 
@@ -39,7 +38,7 @@ function Login(props) {
                         <h1>Login</h1>
                         <form onSubmit={handleLogin}>
                             <label>
-                                Username:
+                                Usuário
                                 <input
                                     type="text"
                                     value={username}
@@ -48,7 +47,7 @@ function Login(props) {
                                 />
                             </label>
                             <label>
-                                Password:
+                                Senha
                                 <input
                                     type="password"
                                     value={password}
@@ -58,7 +57,7 @@ function Login(props) {
                             </label>
                             {error && <p className="error-message">{error}</p>}
                             <button type="submit" className="login-button">
-                                Login
+                                Entrar
                             </button>
                         </form>
                     </div>

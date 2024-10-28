@@ -14,9 +14,8 @@ header {
     transition: max-height 0.3s ease;
 }
 
-/* Oculta os links em mobile por padrão */
 .links.open {
-    max-height: 500px; /* Exibe quando aberto */
+    max-height: 500px;
 }
 
 .links {
@@ -54,7 +53,7 @@ i {
 #title {
     color: #007AFF;
     line-height: 1rem;
-    pointer-events: none;
+    text-decoration: inherit;
 }
 
 #botao {
@@ -79,6 +78,11 @@ i {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+.botao-sair {
+    border: 2px solid #007AFF;
+    color: #007AFF;
 }
 
 @media (max-width: 768px) {
@@ -111,6 +115,7 @@ i {
     .navigation a, .login button {
         font-size: 1rem;
         padding: 10px 0;
+        margin: 0;
     }
 
     .navigation li, .login button {
