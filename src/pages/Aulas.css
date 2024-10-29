@@ -40,12 +40,20 @@
 .botao-enviar {
     background-color: #007AFF;
     color: white;
-    padding: .25rem .5rem;
+    padding: .5rem .5rem;
     font-weight: 600;
     border-radius: .25rem;
     cursor: pointer;
     font-size: 1rem;
 }
+
+.pdf-link {
+    color: #007BFF;
+    text-decoration: underline;
+    margin-top: 5px;
+    display: inline-block;
+}
+
 
 @media (max-width: 768px) {
     .form-aula input,
